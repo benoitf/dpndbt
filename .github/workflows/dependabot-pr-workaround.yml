@@ -12,7 +12,6 @@ name: Dependabot-post-check
 # https://github.com/dependabot/dependabot-core/issues/1297
 
 permissions:
-  pull-requests: write
   contents: write
 
 on:
@@ -46,5 +45,5 @@ jobs:
       - name: Commit changes
         run: |
           git add yarn.lock # only adding yarn.lock as not using zero-installs
-          git commit -m "fix: dependabot autofix"
+          git commit --amend --no-edit
           git push
