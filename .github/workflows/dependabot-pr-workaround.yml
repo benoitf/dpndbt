@@ -45,6 +45,6 @@ jobs:
       - name: Commit changes
         run: |
           git add yarn.lock # only adding yarn.lock as not using zero-installs
-          git commit --amend --no-edit
+          git commit --amend --no-edit --signoff
           export GITHUB_TOKEN=${{ secrets.CHE_BOT_GITHUB_TOKEN }}
           git push -f
