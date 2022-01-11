@@ -16,7 +16,7 @@
     "url": "https://github.com/benoitf/dpndbt/issues"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
   },
   "homepage": "https://github.com/benoitf/dpndbt#readme"
 }
