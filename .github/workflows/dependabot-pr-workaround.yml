@@ -40,10 +40,11 @@ jobs:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false # allow to override yarn.lock files
       - name: Config Git
         run: |
-          git config --global user.email ${{ secrets.GIT_EMAIL }}
-          git config --global user.name ${{ secrets.GIT_USERNAME }}
+          git config --global user.email "che-bot@eclipse.org"
+          git config --global user.name "Che bot"
       - name: Commit changes
         run: |
           git add yarn.lock # only adding yarn.lock as not using zero-installs
           git commit --amend --no-edit
+          export GITHUB_TOKEN=${{ secrets.CHE_BOT_GITHUB_TOKEN }}
           git push -f
